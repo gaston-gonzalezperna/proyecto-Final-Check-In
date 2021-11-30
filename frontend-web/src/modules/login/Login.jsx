@@ -26,6 +26,7 @@ const Login = () => {
         } else {
             try{
                 response = await callLogin(email, password, idHotel);
+                localStorage.setItem("email", email);
                 if (response) {
                     history.push("/home")
                 }

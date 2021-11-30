@@ -23,6 +23,8 @@ const Home = () => {
   const history = useHistory()
 
   let idHotel = localStorage.getItem("idHotel")      
+  let email = localStorage.getItem("email")      
+
   const tiposDocumento = [{ "value": 0, "label": "DNI" }]
 
   const getBase64 = async (file) => {
@@ -172,6 +174,7 @@ const Home = () => {
           top: "20px"
         }}
         >Buscar</button>
+        <span style={{ fontWeight: "bolder", color:"black", fontSize: "50%",marginLeft: "650px", marginTop:"20px"}} > Bienvenido {email} ! </span>
          <button onClick={signOff} style={{
                   color: "dimgray",
                   backgroundColor: "lightgray",
@@ -181,7 +184,7 @@ const Home = () => {
                   height: "50px",
                   fontSize: "70%",
                   alignContent:"end",
-                  marginLeft: "650px",
+                  marginLeft: "50px",
                   marginTop:"20px"
                 }}
                 >Salir</button>
@@ -220,7 +223,9 @@ const Home = () => {
           left: "615px",
           top: "20px"
         }}
-        >Buscar</button>        { <button onClick={signOff} style={{
+        >Buscar</button>  
+        <span style={{ fontWeight: "bolder", color:"black", fontSize: "50%",marginLeft: "650px", marginTop:"20px"}} > Bienvenido {email} ! </span>
+          { <button onClick={signOff} style={{
           color: "dimgray",
           backgroundColor: "lightgray",
           border: "2px solid lightgray",
@@ -229,7 +234,7 @@ const Home = () => {
           height: "50px",
           fontSize: "70%",
           alignContent:"end",
-          marginLeft: "650px",
+          marginLeft: "50px",
           marginTop:"20px"
         }}
         >Salir</button> }
